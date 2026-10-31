@@ -1,0 +1,73 @@
+{
+  "auto_think": {
+    "type": "bool",
+    "description": "开启自主思考",
+    "hint": "关掉后不会自己找活干，但 /task 手动派活仍然可用",
+    "default": true
+  },
+  "min_gap_minutes": {
+    "type": "int",
+    "description": "两次思考之间的最小间隔（分钟）",
+    "hint": "每次思考是一次模型调用。如果同时装了杂念系统，建议这个值设大一些",
+    "default": 60
+  },
+  "max_gap_minutes": {
+    "type": "int",
+    "description": "两次思考之间的最大间隔（分钟）",
+    "hint": "实际间隔在这两个值之间随机",
+    "default": 180
+  },
+  "daily_task_limit": {
+    "type": "int",
+    "description": "每天最多自主办几件事",
+    "hint": "只管它自己找的活，手动派活不受限制。填 0 表示不限制",
+    "default": 8
+  },
+  "max_steps": {
+    "type": "int",
+    "description": "单个任务最多几轮",
+    "hint": "每轮一次模型调用加一次工具调用。4 轮能覆盖大部分情况",
+    "default": 4
+  },
+  "quiet_hours": {
+    "type": "string",
+    "description": "免打扰时段",
+    "hint": "格式 起始-结束（24 小时制），比如 1-7。留空表示不限制",
+    "default": "1-7"
+  },
+  "notify_targets": {
+    "type": "list",
+    "description": "结果通知到哪里",
+    "hint": "格式：平台ID:会话类型:目标ID，例如 default:FriendMessage:123456。可填多个",
+    "default": []
+  },
+  "tavily_api_key": {
+    "type": "string",
+    "description": "Tavily 搜索密钥（可选）",
+    "hint": "不填也能搜，会自动退回 DuckDuckGo。填了结果更稳更干净",
+    "default": ""
+  },
+  "persona_mode": {
+    "type": "string",
+    "description": "人格来源",
+    "options": [
+      "auto",
+      "custom",
+      "none"
+    ],
+    "hint": "auto=先读 AstrBot 人设表，读不到用自定义文本；custom=只用自定义文本；none=通用默认",
+    "default": "auto"
+  },
+  "persona_prompt": {
+    "type": "text",
+    "description": "自定义人格提示词",
+    "hint": "留空则自动读 AstrBot 的 default 人格",
+    "default": ""
+  },
+  "peer_worries_file": {
+    "type": "string",
+    "description": "杂念系统的心事文件（可选）",
+    "hint": "填了会把这些心事当作选题参考。默认指向同机安装的杂念系统；对方没装就自动忽略",
+    "default": "/AstrBot/data/plugin_data/astrbot_plugin_idle_mind/worries.jsonl"
+  }
+}
