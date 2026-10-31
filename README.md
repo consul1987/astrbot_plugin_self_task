@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![AstrBot](https://img.shields.io/badge/AstrBot-%3E%3D4.17.0-blue.svg)](https://astrbot.app)
-[![version](https://img.shields.io/badge/version-1.0.0-orange.svg)](metadata.yaml)
+[![version](https://img.shields.io/badge/version-1.0.1-orange.svg)](metadata.yaml)
 
 给它一个目标，它自己拆步骤、调工具、换方法，直到办完或者确认办不成。
 

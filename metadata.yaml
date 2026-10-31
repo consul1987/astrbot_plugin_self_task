@@ -1,7 +1,7 @@
 name: astrbot_plugin_self_task
 display_name: 思考系统
 desc: 给它一个目标，它自己拆步骤、调工具、换方法，直到办完或确认办不成；没人派活时也会定时想想有没有该动手的事，但大部分时候答案是「没有」。可独立安装，可选读取杂念系统的心事作为选题。
-version: 1.0.0
+version: 1.0.1
 author: consul1987
 short_desc: 会办事，也会判断什么事不必办
 astrbot_version: ">=4.17.0"
